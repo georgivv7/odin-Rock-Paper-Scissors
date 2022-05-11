@@ -27,6 +27,32 @@
         function computerPlay(){
             return getRandom();
         }
+        function playRound(playerSelection,computerSelection){           
+            if(playerSelection == computerSelection){
+                return `Draw! Selections are equal!`;
+            }
+            else if(playerSelection == "rock" && computerSelection == "paper"){
+                return `You Lose! ${computerSelection} beats ${playerSelection}`;
+            }
+            else if(playerSelection == "rock" && computerSelection == "scissors"){
+                return `You Win! ${playerSelection} beats ${computerSelection}`;
+            }
+            else if(playerSelection == "paper" && computerSelection == "rock"){
+                return `You Win! ${playerSelection} beats ${computerSelection}`;
+            }
+            else if(playerSelection == "paper" && computerSelection == "scissors"){
+                return `You Lose! ${computerSelection} beats ${playerSelection}`;
+            }
+            else if(playerSelection == "scissors" && computerSelection == "rock"){
+                return `You Lose! ${computerSelection} beats ${playerSelection}`;
+            }
+            else if(playerSelection == "scissors" && computerSelection == "paper"){
+                return `You Win! ${playerSelection} beats ${computerSelection}`;
+            }
+            else{
+                return "Invalid option! Try again!";
+            }
+        }
     </script>
 </body>
 </html>
