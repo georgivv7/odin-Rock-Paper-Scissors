@@ -59,6 +59,17 @@
             let result = prompt("Type an option: ")
             return result;
         }
+        
+        function game(){
+            const playerSelection = getUserSelection();
+            playerSelection.toLowerCase();
+            const computerSelection = computerPlay();
+            return playRound(playerSelection,computerSelection);       
+        }
+       
+        for(let i= 1; i <= 5; i++){               
+            console.log(game()); 
+        }
     </script>
 </body>
 </html>
