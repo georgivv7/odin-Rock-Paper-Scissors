@@ -27,6 +27,7 @@
         function computerPlay(){
             return getRandom();
         }
+
         function playRound(playerSelection,computerSelection){           
             if(playerSelection == computerSelection){
                 return `Draw! Selections are equal!`;
@@ -52,6 +53,11 @@
             else{
                 return "Invalid option! Try again!";
             }
+        }
+
+        function getUserSelection(){
+            let result = prompt("Type an option: ")
+            return result;
         }
     </script>
 </body>
