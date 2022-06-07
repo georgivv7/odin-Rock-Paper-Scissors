@@ -7,69 +7,9 @@
     <title>Rock-Paper-Scissors</title>
 </head>
 <body>
-    <script>
-        function getRandom() {
-            let num = Math.floor(Math.random() * 3);
 
-            switch (num) {
-            case 0:
-            return 'rock';
+    <div id="game"></div>
 
-            case 1:
-            return 'paper';
-
-            default:
-            return 'scissors';
-            }
-
-        }
-
-        function computerPlay(){
-            return getRandom();
-        }
-
-        function playRound(playerSelection,computerSelection){           
-            if(playerSelection == computerSelection){
-                return `Draw! Selections are equal!`;
-            }
-            else if(playerSelection == "rock" && computerSelection == "paper"){
-                return `You Lose! ${computerSelection} beats ${playerSelection}`;
-            }
-            else if(playerSelection == "rock" && computerSelection == "scissors"){
-                return `You Win! ${playerSelection} beats ${computerSelection}`;
-            }
-            else if(playerSelection == "paper" && computerSelection == "rock"){
-                return `You Win! ${playerSelection} beats ${computerSelection}`;
-            }
-            else if(playerSelection == "paper" && computerSelection == "scissors"){
-                return `You Lose! ${computerSelection} beats ${playerSelection}`;
-            }
-            else if(playerSelection == "scissors" && computerSelection == "rock"){
-                return `You Lose! ${computerSelection} beats ${playerSelection}`;
-            }
-            else if(playerSelection == "scissors" && computerSelection == "paper"){
-                return `You Win! ${playerSelection} beats ${computerSelection}`;
-            }
-            else{
-                return "Invalid option! Try again!";
-            }
-        }
-
-        function getUserSelection(){
-            let result = prompt("Type an option: ")
-            return result;
-        }
-        
-        function game(){
-            const playerSelection = getUserSelection();
-            playerSelection.toLowerCase();
-            const computerSelection = computerPlay();
-            return playRound(playerSelection,computerSelection);       
-        }
-       
-        for(let i= 1; i <= 5; i++){               
-            console.log(game()); 
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
